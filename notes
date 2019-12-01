@@ -1,0 +1,43 @@
+页面4种文件类型
+  html -> axml
+  css -> acss
+  js
+  json  
+
+app的3种文件类型
+  app.js(必)  -> 全局脚本 全局变量
+  app.acss -> 全局样式
+  app.json(必) -> 项目配置
+
+页面路径配置
+  对象结构 
+    app.json: {
+      pages: [
+        "page1",    // 一进来小程序的页面
+        "page2",
+        ...
+        "pageN"
+      ]
+    }
+  
+app的生命周期函数
+  onLaunch -> 项目初始化完成时触发，只触发一次
+  onShow -> 页面展示的时候触发
+  onHide -> 页面隐藏的时候触发
+  onError -> 程序出现错误时触发
+
+page的生命周期函数
+  onLoad -> 页面加载时执行，每个页面只执行一次
+  onReady -> 页面初次渲染完成，每个页面只执行一次
+  onShow -> 页面显示后执行一次，可多次执行
+  onHide -> 页面每次隐藏时执行一次
+  onUnload -> 页面卸载时执行一次
+  onTitleClick -> 标题被点击
+  onPullDownRefresh -> 页面被下拉
+  onReachBottom -> 页面被拉到底部
+  onShareAppMessage -> 返回自定义分享信息
+
+全局对象与全局样式
+  getApp -> app对象
+            外部脚本操作app中的对象、方法和常量
+            
