@@ -49,10 +49,30 @@ page的生命周期函数
       titleBarColor: "导航栏颜色"
     }
   }
-
   #ffbfc7   标题栏淡粉色
   #f2f5f8   边框与背景色
   #ff6699   主题色选中色
   #868585   字体色未选中色
   #ffe817   视觉反差色
+
+导航栏-配置属性名称
+  textColor selectedColor backgroundColor items(pagePath、name、icon、activeIcon)
+
+导航组件-<navigator></navigator>
+  hover-class -> 点击时改变的样式
+  hover-start-time -> 按住ms后出现点击状态
+  hover-stay-time -> 手指释放ms后保留的状态
+  url -> 跳转地址
+  open-type -> 跳转类型
+    navigate -> 保留当前页面，跳转新页面
+    redirect -> 销毁当前页面，跳转新页面
+    navigateBack -> 返回到上一个页面
+    switchTab -> 跳转到tabBar页面
+
+导航api
+  my.navigateTo
+  my.redirectTo
+  my.navigateBack
+  my.switchTab
+
             

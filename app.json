@@ -1,10 +1,50 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/hello/hello"
+    "pages/others/others",
+    "pages/mine/info/info",
+    "pages/orders/addressInfo/addressInfo",
+    "pages/orders/addressList/addressList",
+    "pages/orders/confirmOrder/confirmOrder",
+    "pages/orders/payment/payment",
+    "pages/shoppingCart/cart/cart",
+    "pages/query/category/category",
+    "pages/query/items/items",
+    "pages/query/list/list"
   ],
   "window": {
     "defaultTitle": "慕课购物",
     "titleBarColor": "#ffbfc7"
+  },
+  "tabBar": {
+    "textColor": "#868585",
+    "selectedColor": "#ffbfc7",
+    "backgroundColor": "#f2f5f8",
+    "items": [
+      {
+        "pagePath": "pages/index/index",
+        "name": "首页",
+        "icon": "resources/icon/tabBar/index.png",
+        "activeIcon": "resources/icon/tabBar/index-sel.png"
+      },
+      {
+        "pagePath": "pages/query/category/category",
+        "name": "分类",
+        "icon": "resources/icon/tabBar/category.png",
+        "activeIcon": "resources/icon/tabBar/category-sel.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/cart/cart",
+        "name": "购物车",
+        "icon": "resources/icon/tabBar/shopping-car.png",
+        "activeIcon": "resources/icon/tabBar/shopping-car-sel.png"
+      },
+      {
+        "pagePath": "pages/mine/info/info",
+        "name": "我的",
+        "icon": "resources/icon/tabBar/mine.png",
+        "activeIcon": "resources/icon/tabBar/mine-sel.png"
+      }
+    ]
   }
 }
