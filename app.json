@@ -4,6 +4,7 @@
     "pages/hello/hello"
   ],
   "window": {
-    "defaultTitle": "My App"
+    "defaultTitle": "慕课购物",
+    "titleBarColor": "#ffbfc7"
   }
 }

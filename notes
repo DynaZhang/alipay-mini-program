@@ -40,4 +40,19 @@ page的生命周期函数
 全局对象与全局样式
   getApp -> app对象
             外部脚本操作app中的对象、方法和常量
+  app.acss -> 全局样式的配置
+
+全局标题栏和导航栏配置
+  app.json: {
+    window: {
+      defaultTitle: "标题",
+      titleBarColor: "导航栏颜色"
+    }
+  }
+
+  #ffbfc7   标题栏淡粉色
+  #f2f5f8   边框与背景色
+  #ff6699   主题色选中色
+  #868585   字体色未选中色
+  #ffe817   视觉反差色
             
