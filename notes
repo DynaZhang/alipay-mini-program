@@ -118,4 +118,9 @@ for循环列表渲染
     console.log(e.target.data.name)
     console.log(e.target.data.age)
   }
+
+rpx与px
+  px: 固定像素
+  rpx: 自适应（响应式）像素
+  
             
