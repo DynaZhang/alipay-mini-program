@@ -47,6 +47,20 @@ page的生命周期函数
     window: {
       defaultTitle: "标题",
       titleBarColor: "导航栏颜色"
+    },
+    tabs: {
+      "textColor": "xxxx",
+      "selectedColor": "xxxx",
+      "backgroundColor": "xxxx",
+      items: [
+        {
+          "pagePath": "xxx",
+          "name": "xxx",
+          "icon": "xxx",
+          "activeIcon": "xxx"
+        },
+        xxxxxxxx
+      ]
     }
   }
   #ffbfc7   标题栏淡粉色
@@ -75,4 +89,33 @@ page的生命周期函数
   my.navigateBack
   my.switchTab
 
+支付宝小程序 数据绑定
+  通过{{value}}表达式来动态的渲染页面内容
+  js文件中需要以下形式定义page中的data对象
+  data: {
+    username: 'xxxx'
+  }
+
+条件渲染
+  通过数据绑定传入true或false
+  <view a:if={{value}}></view>
+  <view a:elif={{value}}></view>
+  <view a:else></view>
+
+for循环列表渲染
+  <view a:for={{list}} a:for-item='item' a:for-index='index'>
+    {{index}}: {{item}}
+  </view>
+
+小程序事件类型
+  tap与longTap 触摸
+  touchStart与touchMove
+  touchEnd与touchCancel
+
+小程序事件对象与dataset
+  <view data-name='1' data-age='2' onTap="tap">测试</view>
+  tap: function(e) {
+    console.log(e.target.data.name)
+    console.log(e.target.data.age)
+  }
             
