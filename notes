@@ -122,5 +122,23 @@ for循环列表渲染
 rpx与px
   px: 固定像素
   rpx: 自适应（响应式）像素
+
+图片组件
+  <image src="" class="" style="" mode="" lazyLoad="" onError="" onLoaad="" />
+  mode:
+    图片的缩放模式
+      scaleToFill  图片宽高完全拉伸或缩放到image标签进行填充
+      aspectFit   保证长边显示，宽高按照纵横比缩放
+      aspectFill  保证短边显示，宽高按照纵横比缩放
+      widthFix    宽度不变，高度自动变化，保证原图比例
+    图片裁剪模式
+      top
+      top-left
+      top-right
+      right
+      bottom
+      bottom-left
+      bottom-right
+      left
   
             
