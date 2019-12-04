@@ -1,1 +1,30 @@
-<!-- 小程序收藏组件，更多高级用法请参考文档：https://docs.alipay.com/mini/component/component-favorite -->
+<!--swiper-->
+<view>
+  <swiper indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#ff6699">
+    <block a:for="{{swiperList}}">
+      <swiper-item >
+        <image src={{item}} class="swiper-image"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="feature-list">
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/fang.png" class="feature-icon"></image>
+      全场包邮
+    </view>
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/flash.png" class="feature-icon"></image>
+      先行赔付
+    </view>
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/yuan.png" class="feature-icon"></image>
+      7天无理由
+    </view>
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/ling.png" class="feature-icon"></image>
+      退货先补
+    </view>
+  </view>
+
+</view>

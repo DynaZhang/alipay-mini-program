@@ -1,0 +1,30 @@
+page {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f5f8;
+}
+
+.swiper-image {
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.feature-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #ffffff;
+  color: gray;
+  line-height: 35px;
+}
+
+.feature-list .feature-item {
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+.feature-item .feature-icon {
+  width: 14rpx;
+  height: 14rpx;
+  margin-right: 6rpx;
+}
