@@ -27,4 +27,74 @@
     </view>
   </view>
 
+  <view class="title-items-list">
+    <view class="title-tag">
+      <image src="/resources/icon/smallIco/rec.png" class="title-icon"></image>
+      推荐商品
+    </view>
+  </view>
+  <scroll-view class="scroll-rec-items" scroll-x="{{true}}">
+    <image src="/resources/items/1001.png" class="items-cover"></image>
+    <image src="/resources/items/1002.png" class="items-cover"></image>
+    <image src="/resources/items/1001.png" class="items-cover"></image>
+    <image src="/resources/items/1002.png" class="items-cover"></image>
+    <image src="/resources/items/1001.png" class="items-cover"></image>
+    <image src="/resources/items/1002.png" class="items-cover"></image>
+    <image src="/resources/items/1001.png" class="items-cover"></image>
+    <image src="/resources/items/1002.png" class="items-cover"></image>
+  </scroll-view>
+
+  <view class="title-items-list">
+    <view class="title-tag">
+      <image src="/resources/icon/smallIco/diamond.png" class="title-icon"></image>
+      商品上新
+    </view>
+  </view>
+  <view class="new-item-list">
+    <view class="item-outter">
+      <image src="/resources/items/1001.png" class="new-item-cover"></image> 
+      <view class="item-bodder">
+        <view class="tags">衣服</view>
+        <view class="tags">裤子</view>
+        <view class="tags">奢侈品</view>
+        <view class="price-bodder">
+          <view class="price">￥460</view>
+          <view class="like-counts">
+            888
+           <image src="/resources/icon/smallIco/likes.png" class="like-icon"></image>
+          </view>
+        </view> 
+      </view> 
+    </view>
+    <view class="item-outter">
+      <image src="/resources/items/1001.png" class="new-item-cover"></image> 
+      <view class="item-bodder">
+        <view class="tags">衣服</view>
+        <view class="tags">裤子</view>
+        <view class="tags">奢侈品</view>
+        <view class="price-bodder">
+          <view class="price">￥460</view>
+          <view class="like-counts">
+            888
+           <image src="/resources/icon/smallIco/likes.png" class="like-icon"></image>
+          </view>
+        </view> 
+      </view> 
+    </view>
+    <view class="item-outter">
+      <image src="/resources/items/1001.png" class="new-item-cover"></image> 
+      <view class="item-bodder">
+        <view class="tags">衣服</view>
+        <view class="tags">裤子</view>
+        <view class="tags">奢侈品</view>
+        <view class="price-bodder">
+          <view class="price">￥460</view>
+          <view class="like-counts">
+            888
+           <image src="/resources/icon/smallIco/likes.png" class="like-icon"></image>
+          </view>
+        </view> 
+      </view> 
+    </view>
+  </view>
 </view>

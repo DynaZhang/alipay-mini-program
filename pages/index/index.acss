@@ -18,13 +18,113 @@ page {
   line-height: 35px;
 }
 
-.feature-list .feature-item {
+.feature-item {
   padding: 0 5px;
   font-size: 12px;
 }
 
-.feature-item .feature-icon {
+.feature-icon {
   width: 14rpx;
   height: 14rpx;
   margin-right: 6rpx;
+}
+
+.title-items-list {
+  background-color: #ffffff;
+  margin-top: 5px;
+  line-height: 35px;
+  font-size: 12px;
+  color: gray;
+}
+
+.title-tag {
+  margin-left: 10px;
+}
+
+.title-icon {
+  width: 20rpx;
+  height: 20rpx;
+  margin-right: 6rpx;
+}
+
+.scroll-rec-items {
+  width: 100%;
+  white-space: nowrap;
+  background-color: #ffffff;
+}
+
+.items-cover {
+  width: 170rpx;
+  height: 250rpx;
+  margin-left: 15rpx;
+  border-radius: 3px;
+}
+
+.new-item-list {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item-outter {
+  width: 350rpx;
+  margin-bottom: 10rpx;
+  padding: 6rpx 10rpx;
+}
+
+.new-item-cover {
+  width: 350rpx;
+  height: 510rpx;
+  margin-right: 10rpx;
+}
+
+.item-bodder {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  height: 110rpx;
+  border-left: 1px solid #f2f5f8;
+  border-right: 1px solid #f2f5f8;
+  border-bottom: 1px solid #f2f5f8;
+}
+
+.tags {
+  background-color: #f2f5f8;
+  font-size: 11px;
+  color: gray;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  padding: 5rpx 10rpx;
+  height: 30rpx;
+}
+
+.price-bodder {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.price {
+  margin-left: 10rpx;
+  margin-bottom: 10rpx;
+  font-size: 11px;
+  color: #ff6699;
+}
+
+.like-counts {
+  font-size: 11px;
+  margin-right: 12rpx;
+  margin-bottom: 10rpx;
+  color: gray;
+}
+
+.like-icon {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 6rpx;
 }
