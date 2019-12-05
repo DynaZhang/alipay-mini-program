@@ -140,5 +140,17 @@ rpx与px
       bottom-left
       bottom-right
       left
+
+网络请求-api
+  my.request({
+    url: "",
+    method: "",
+    header: {},
+    data: {},
+    dataType: "json",
+    success: function(res) {},
+    fail: function(err) {},
+    complete: function(err) {}
+  })
   
             
