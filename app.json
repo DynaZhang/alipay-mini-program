@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/query/category/category",
+
     "pages/index/index",
     "pages/others/others",
     "pages/mine/info/info",
@@ -8,7 +10,6 @@
     "pages/orders/confirmOrder/confirmOrder",
     "pages/orders/payment/payment",
     "pages/shoppingCart/cart/cart",
-    "pages/query/category/category",
     "pages/query/items/items",
     "pages/query/list/list"
   ],
