@@ -1,0 +1,14 @@
+page {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f5f8;
+}
+
+.item-desc-bar {
+  background-color: #ffffff;
+  font-size: 15px;
+  line-height: 60rpx;
+  padding: 10rpx 0;
+  color: #ff6699;
+}
+
