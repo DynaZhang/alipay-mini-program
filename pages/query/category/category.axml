@@ -14,8 +14,10 @@
   <view class="category">
     <block a:for="{{categoryList}}">
       <view class="cat-item">
-        <image src="{{`/resources/category/${index}-${item.code}.png`}}" class="cat-icon"></image>
-        <view class="cat-name">{{item.name}}</view>
+        <navigator url="{{`/pages/query/list/list?searchType=cat&catId=${item.id}&catName=${item.name}`}}" open-type="navigator">
+          <image src="{{`/resources/category/${index}-${item.code}.png`}}" class="cat-icon"></image>
+          <view class="cat-name">{{item.name}}</view>
+        </navigator>
       </view>
     </block>
   </view>

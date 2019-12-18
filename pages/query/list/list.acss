@@ -12,3 +12,9 @@ page {
   color: #ff6699;
 }
 
+.item-desc-title {
+  width: 150rpx;
+  border-bottom: 2px solid #ff6699;
+  margin-left: 30rpx;
+  text-align: center;
+}

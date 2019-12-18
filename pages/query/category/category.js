@@ -18,23 +18,12 @@ Page({
     })
   },
   handleSearch (event) {
-    const itemName = event.detail.value
+    let itemName = event.detail.value
     if (!itemName && itemName !== 0) {
-      return
+      itemName = ''
     }
-    my.request({
-      url: 'http://www.imoocdsp.com/items/search',
-      method: 'post',
-      dataType: 'json',
-      data: {
-        itemName: event.detail.value
-      },
-      success: function(result) {
-        console.log(result.data.data)
-      },
-      fail: function(err) {
-
-      }
-    })
+    my.navigateTo({
+      url:  `/pages/query/list/list?searchType=words&itemName=${itemName}`
+    });
   }
 });
