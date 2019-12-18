@@ -1,5 +1,8 @@
 <view>
   <view class="item-desc-bar">
-    <view class="item-desc-title">title</view>
+    <view class="item-desc-title">{{catName}}</view>
+  </view>
+  <view>
+    <item-list list="{{itemList}}"></item-list>
   </view>
 </view>

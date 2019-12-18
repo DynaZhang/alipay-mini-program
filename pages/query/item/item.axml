@@ -1,0 +1,58 @@
+<view>
+  <scroll-view class="scroll-item-cover" scroll-x={{true}}>
+    <block a:for="{{itemDetail.headerImages}}">
+      <image src={{item}} class="item-cover" />
+    </block>
+  </scroll-view>
+
+  <view class="item-title">
+    {{itemDetail.name}}
+  </view>
+
+  <view class="item-price">
+    <view class="item-price-low">
+      ￥{{itemDetail.priceDiscountYuan}}
+    </view>
+    <view class="item-price-high">
+      ￥{{itemDetail.priceNormalYuan}}
+    </view>
+    <view class="item-price-discount">
+      {{itemDetail.discounts}}
+    </view>
+  </view>
+  
+  <view class="properties">
+    <view>销量{{itemDetail.sellCounts}}</view>
+    <view>收藏{{itemDetail.likeCounts}}人</view>
+    <view>72小时发货</view>
+  </view>
+
+  <view class="features">
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/right.png" class="feature-icon" />
+      全国包邮
+    </view>
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/right.png" class="feature-icon" />
+      退货补运费
+    </view>
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/right.png" class="feature-icon" />
+      7天无理由
+    </view>
+    <view class="feature-item">
+      <image src="/resources/icon/smallIco/right.png" class="feature-icon" />
+      闪电发货
+    </view>
+  </view>
+
+  <view class="item-desc-bar">
+    <view class="item-desc-title">商品详情</view>
+  </view>
+  <view class="item-desc">
+    <block a:for={{itemDetail.content}}>
+      <view a:if="{{item.contentType === '1'}}" style="{{item.cssStyle}}">{{item.words}}</view>
+      <image a:if="{{item.contentType === '2'}}" src="{{item.url}}" style="{{item.cssStyle}}" />
+    </block>
+  </view>
+</view>

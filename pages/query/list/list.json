@@ -1,1 +1,5 @@
-{}
+{
+  "usingComponents": {
+    "item-list": "/components/itemList/itemList"
+  }
+}

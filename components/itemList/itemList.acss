@@ -1,0 +1,76 @@
+.new-item-list {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.item-outter {
+  width: 350rpx;
+  margin-bottom: 10rpx;
+  padding: 6rpx 10rpx;
+}
+
+.new-item-cover {
+  width: 350rpx;
+  height: 510rpx;
+  margin-right: 10rpx;
+}
+
+.item-border {
+  min-height: 110rpx;
+  border-left: 1px solid #f2f5f8;
+  border-right: 1px solid #f2f5f8;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap; 
+}
+
+.item-title {
+  font-size: 16px;
+  line-height: 40px;
+  background-color: #ffffff;
+  padding: 14rpx;
+}
+
+.tags {
+  background-color: #f2f5f8;
+  font-size: 11px;
+  color: gray;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5rpx 10rpx;
+  height: 30rpx;
+}
+
+.price-border {
+  border: 1px solid #f2f5f8;
+  border-top: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 5rpx 10rpx;
+}
+
+.price {
+  margin-left: 10rpx;
+  font-size: 11px;
+  color: #ff6699;
+  margin-bottom: 10rpx;
+}
+
+.like-counts {
+  font-size: 11px;
+  margin-left: 12rpx;
+  margin-bottom: 10rpx;
+  color: gray;
+}
+
+.like-icon {
+  width: 18rpx;
+  height: 18rpx;
+  margin-left: 10rpx;
+}
