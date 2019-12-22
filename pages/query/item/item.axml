@@ -60,14 +60,17 @@
 
   <view class="bottom-operator">
     <view class="tab cart" onTap="">
-      <image src="/resources/icon/smallIco/cart-empty.png" class="icon"></image>
+      <image src="{{cartIcon}}" class="icon"></image>
       <view class="text">购物车</view>
     </view>
     <view class="tab like" onTap="">
       <image src="/resources/icon/smallIco/unlike.png" class="icon"></image>
       <view class="text">收藏</view>
     </view>
-    <view class="btn add-to-cart">放入购物车</view>
+    <view class="btn add-to-cart" onTap="addToCart">
+      <view animation="{{animationInfo}}" class="animation-img" style="opacity:{{animationOpacity}};background-image:url('{{itemDetail.headerImages[0]}}')"></view>
+      放入购物车
+    </view>
     <view class="btn buy-my">购买</view>
   </view>
 </view>

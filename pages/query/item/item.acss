@@ -151,3 +151,15 @@ page {
   color: #fff;
   background-color: #ff6699;
 }
+
+.animation-img {
+  margin-top: 20rpx;
+  margin-left: 110rpx;
+  height: 35rpx;
+  width: 35rpx;
+  border: 2px solid #ff679a;
+  border-radius: 15rpx;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+}
