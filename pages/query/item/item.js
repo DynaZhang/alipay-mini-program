@@ -3,7 +3,7 @@ Page({
     itemDetail: null
   },
   onLoad(params) {
-    const itemId = 'item-new-3001'
+    const itemId = params.id
     this.getItemDetail(itemId)
   },
   getItemDetail(itemId) {

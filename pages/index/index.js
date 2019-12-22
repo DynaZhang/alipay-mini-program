@@ -98,5 +98,11 @@ Page({
       }
     });
     my.stopPullDownRefresh();
+  },
+  toItemDetail(event) {
+    const {itemId} = event.target.dataset
+    my.navigateTo({
+      url: `/pages/query/item/item?id=${itemId}`
+    });
   }
 });

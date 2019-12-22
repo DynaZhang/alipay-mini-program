@@ -46,13 +46,28 @@
     </view>
   </view>
 
-  <view class="item-desc-bar">
-    <view class="item-desc-title">商品详情</view>
+  <view>
+    <view class="item-desc-bar">
+      <view class="item-desc-title">商品详情</view>
+    </view>
+    <view class="item-desc">
+      <block a:for={{itemDetail.content}}>
+        <view a:if="{{item.contentType === '1'}}" style="{{item.cssStyle}}">{{item.words}}</view>
+        <image a:if="{{item.contentType === '2'}}" src="{{item.url}}" style="{{item.cssStyle}}" />
+      </block>
+    </view>
   </view>
-  <view class="item-desc">
-    <block a:for={{itemDetail.content}}>
-      <view a:if="{{item.contentType === '1'}}" style="{{item.cssStyle}}">{{item.words}}</view>
-      <image a:if="{{item.contentType === '2'}}" src="{{item.url}}" style="{{item.cssStyle}}" />
-    </block>
+
+  <view class="bottom-operator">
+    <view class="tab cart" onTap="">
+      <image src="/resources/icon/smallIco/cart-empty.png" class="icon"></image>
+      <view class="text">购物车</view>
+    </view>
+    <view class="tab like" onTap="">
+      <image src="/resources/icon/smallIco/unlike.png" class="icon"></image>
+      <view class="text">收藏</view>
+    </view>
+    <view class="btn add-to-cart">放入购物车</view>
+    <view class="btn buy-my">购买</view>
   </view>
 </view>

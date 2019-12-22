@@ -29,8 +29,7 @@
 }
 
 .item-title {
-  font-size: 16px;
-  line-height: 40px;
+  font-size: 12px;
   background-color: #ffffff;
   padding: 14rpx;
 }

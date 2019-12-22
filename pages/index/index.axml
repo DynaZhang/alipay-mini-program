@@ -2,8 +2,8 @@
 <view>
   <swiper indicator-dots="{{true}}" autoplay="{{true}}" indicator-active-color="#ff6699">
     <block a:for="{{swiperList}}" a:for-item="item">
-      <swiper-item >
-        <image src="{{item.imageUrl}}" class="swiper-image"></image>
+      <swiper-item>
+        <image src="{{item.imageUrl}}" data-item-id="{{item.itemId}}" class="swiper-image" onTap="toItemDetail"></image>
       </swiper-item>
     </block>
   </swiper>
@@ -36,17 +36,9 @@
   <scroll-view class="scroll-rec-items" scroll-x="{{true}}">
     <block a:for={{recList}}>
       <block a:for={{item.coverList}} a:for-item="imgUrl">
-        <image src="{{imgUrl}}" class="items-cover"></image>
+        <image src="{{imgUrl}}" class="items-cover" data-item-id={{item.id}} onTap="toItemDetail"></image>
       </block>
     </block>
-    <!-- <image src="/resources/items/1001.png" class="items-cover"></image>
-    <image src="/resources/items/1002.png" class="items-cover"></image>
-    <image src="/resources/items/1001.png" class="items-cover"></image>
-    <image src="/resources/items/1002.png" class="items-cover"></image>
-    <image src="/resources/items/1001.png" class="items-cover"></image>
-    <image src="/resources/items/1002.png" class="items-cover"></image>
-    <image src="/resources/items/1001.png" class="items-cover"></image>
-    <image src="/resources/items/1002.png" class="items-cover"></image> -->
   </scroll-view>
 
   <view class="title-items-list">
@@ -56,67 +48,6 @@
     </view>
   </view>
   <view class="new-item-list">
-    <block a:for={{newList}}>
-      <view class="item-outter">
-      <image src="{{item.cover}}" class="new-item-cover"></image> 
-      <view class="item-bodder">
-        <block a:for={{item.tagList}} a:for-item="tag">
-          <view class="tags">{{tag}}</view>
-        </block>
-        <view class="price-bodder">
-          <view class="price">￥{{item.priceDiscountYuan}}</view>
-          <view class="like-counts">
-            {{item.likeCounts}}
-           <image src="/resources/icon/smallIco/likes.png" class="like-icon"></image>
-          </view>
-        </view> 
-      </view> 
-    </view>
-    </block>
-    <!-- <view class="item-outter">
-      <image src="/resources/items/1001.png" class="new-item-cover"></image> 
-      <view class="item-bodder">
-        <view class="tags">衣服</view>
-        <view class="tags">裤子</view>
-        <view class="tags">奢侈品</view>
-        <view class="price-bodder">
-          <view class="price">￥460</view>
-          <view class="like-counts">
-            888
-           <image src="/resources/icon/smallIco/likes.png" class="like-icon"></image>
-          </view>
-        </view> 
-      </view> 
-    </view>
-    <view class="item-outter">
-      <image src="/resources/items/1001.png" class="new-item-cover"></image> 
-      <view class="item-bodder">
-        <view class="tags">衣服</view>
-        <view class="tags">裤子</view>
-        <view class="tags">奢侈品</view>
-        <view class="price-bodder">
-          <view class="price">￥460</view>
-          <view class="like-counts">
-            888
-           <image src="/resources/icon/smallIco/likes.png" class="like-icon"></image>
-          </view>
-        </view> 
-      </view> 
-    </view>
-    <view class="item-outter">
-      <image src="/resources/items/1001.png" class="new-item-cover"></image> 
-      <view class="item-bodder">
-        <view class="tags">衣服</view>
-        <view class="tags">裤子</view>
-        <view class="tags">奢侈品</view>
-        <view class="price-bodder">
-          <view class="price">￥460</view>
-          <view class="like-counts">
-            888
-           <image src="/resources/icon/smallIco/likes.png" class="like-icon"></image>
-          </view>
-        </view> 
-      </view> 
-    </view> -->
+    <item-list list={{newList}}></item-list>
   </view>
 </view>

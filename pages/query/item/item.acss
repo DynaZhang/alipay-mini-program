@@ -88,6 +88,10 @@ page {
   margin-right: 8rpx;
 }
 
+.item-desc {
+  padding: 10rpx 10rpx 100rpx 10rpx;
+}
+
 .item-desc-bar {
   margin-top: 10rpx;
   background-color: #ffffff;
@@ -102,4 +106,48 @@ page {
   border-bottom: 2px solid #ff6699;
   margin-left: 30rpx;
   text-align: center;
+}
+
+.bottom-operator {
+  background-color: #fff;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  width: 15%;
+  text-align: center;
+  padding-top: 14rpx;
+}
+
+.tab .icon {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.tab .text {
+  color: #676767;
+  font-size: 12px;
+}
+
+.btn {
+  width: 35%;
+  text-align: center;
+  font-size: 16px;
+  line-height: 100rpx;
+}
+
+.add-to-cart {
+  color: #3a3932;
+  background-color: #ffe817;
+}
+
+.buy-my {
+  color: #fff;
+  background-color: #ff6699;
 }

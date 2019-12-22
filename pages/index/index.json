@@ -1,3 +1,6 @@
 {
-  "pullRefresh": true
+  "pullRefresh": true,
+  "usingComponents": {
+    "item-list": "/components/itemList/itemList"
+  }
 }
