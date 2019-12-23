@@ -9,8 +9,21 @@ App({
     teacherName: "Dyna",
   },
   // 定义自定义方法
-  sayHello () {
-    console.log("hello imooc~")
+  cartItem(itemId,counts,isSelected) {
+    var cartItem = new Object();
+    cartItem.id = itemId
+    cartItem.counts = counts
+    cartItem.isSelected = isSelected
+    return cartItem;
+  },
+
+  findCartItemById(cartItemArray, itemId) {
+    for (let i = 0; i < cartItemArray.length; i++) {
+      if (cartItemArray[i].id === itemId) {
+        return cartItemArray[i]
+      }
+    }
+    return null
   },
 
   onLaunch(options) {

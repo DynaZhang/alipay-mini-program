@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/shoppingCart/cart/cart",
     "pages/index/index",
     "pages/query/item/item",
     "pages/query/category/category",
@@ -9,7 +10,6 @@
     "pages/orders/addressList/addressList",
     "pages/orders/confirmOrder/confirmOrder",
     "pages/orders/payment/payment",
-    "pages/shoppingCart/cart/cart",
     "pages/query/list/list"
   ],
   "window": {

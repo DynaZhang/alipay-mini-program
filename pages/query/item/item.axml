@@ -59,7 +59,7 @@
   </view>
 
   <view class="bottom-operator">
-    <view class="tab cart" onTap="">
+    <view class="tab cart" onTap="goToCart">
       <image src="{{cartIcon}}" class="icon"></image>
       <view class="text">购物车</view>
     </view>

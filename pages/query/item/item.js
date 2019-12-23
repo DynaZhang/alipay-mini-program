@@ -16,6 +16,35 @@ Page({
       animationOpacity: 1
     })
     this.showAddToCartAnimation()
+    
+    let itemId = this.data.itemDetail.id
+    this.cartItemIncrease(itemId)
+  },
+  cartItemIncrease(itemId) {
+    let cartItemIdArray =  my.getStorageSync({
+      key: 'cartItemIdArray'
+    }).data;
+    console.log(cartItemIdArray)
+    if (cartItemIdArray === null || cartItemIdArray === undefined) {
+      cartItemIdArray = []
+    }
+    let pos = -1
+    cartItemIdArray.forEach((value,index) => {
+      if (value.id === itemId) {
+        pos = index
+      }
+    })
+    if (pos === -1) {
+      let cartItem = getApp().cartItem(itemId,1,false)
+      cartItemIdArray.push(cartItem)
+    } else {
+      cartItemIdArray[pos].counts += 1
+    }
+    my.setStorageSync({
+      key: 'cartItemIdArray',
+      data: cartItemIdArray
+    });
+
   },
   showAddToCartAnimation() {
     let animation = my.createAnimation({
@@ -71,6 +100,11 @@ Page({
         console.log(error)
         my.hideLoading()
       }
+    });
+  },
+  goToCart() {
+    my.switchTab({
+      url: 'pages/shoppingCart/cart/cart'
     });
   }
 });

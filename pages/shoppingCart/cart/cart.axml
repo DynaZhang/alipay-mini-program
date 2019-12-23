@@ -1,3 +1,23 @@
 <view>
-  New Page
+  <view class="empty" hidden="{{emptyHidden}}">
+    <image src="/resources/img/goshopping.png" class="goshopping-img"/>
+    <view class="empty-text">购物车为空</view>
+    <view class="help-yourself-outter">
+      <view class="help-yourself-text" onTap="helpYourself">随便逛一下</view>
+    </view>
+  </view>
+  <view class="full" hidden="{{!emptyHidden}}">
+    购物车不为空
+    <view class="bottom-selletment" hidden="{{!emptyHidden}}">
+      <view class="sel-all-block" onTap="">
+        <image src="/resources/icon/smallIco/select.png" class="select-icon" />
+        <view class="sel-all-text">全选</view>
+      </view>
+      <view class="total-cal">
+        <view class="total-amount">合计: ￥880.00</view>
+        <view class="total-desc">不含运费。折扣优惠</view>
+      </view>
+      <view class="selletment-me" onTap="">去结算(6)</view>
+    </view>
+  </view>
 </view>
