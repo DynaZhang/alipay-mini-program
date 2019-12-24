@@ -1,9 +1,10 @@
 Page({
   data: {
     cartItemList: [],
-    emptyHidden: false
+    emptyHidden: false,
+    totalPrice: 0
   },
-  onLoad() {
+  onShow() {
     const cartItemIdArray = my.getStorageSync({
       key: 'cartItemIdArray'
     }).data;
@@ -35,6 +36,7 @@ Page({
       headers: {'content-type': 'application/x-www-form-urlencoded'},
       success: (result) => {
         const itemList = result.data.data
+        let totalPrice = 0
         for (let i = 0; i < itemList.length; i++) {
           const cartItem = getApp().findCartItemById(cartItemIdArray, itemList[i].id) 
           if (cartItem === null) {
@@ -42,11 +44,13 @@ Page({
           } else {
             itemList[i].counts = cartItem.counts
             itemList[i].isSelected = cartItem.isSelected
+            totalPrice += itemList[i].priceDiscountYuan * cartItem.counts
           }
         }
 
         this.setData({
-          cartItemList: itemList.filter((item,index) => {return item.counts > 0})
+          cartItemList: itemList.filter((item,index) => {return item.counts > 0}),
+          totalPrice
         })
         my.hideLoading()
       },

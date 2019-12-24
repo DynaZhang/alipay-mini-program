@@ -93,3 +93,52 @@ page {
   font-size: 16px;
   line-height: 100rpx;
 }
+
+.full {
+  padding-bottom: 10rpx;
+  margin-bottom: 100rpx;
+}
+
+.cart-line {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  padding: 25rpx;
+  margin-top: 10rpx;
+}
+
+.item-radio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cart-item-img {
+  width: 220rpx;
+  height: 290rpx;
+  margin-left: 12rpx;
+}
+
+.item-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item-title {
+  margin-left: 20rpx;
+  margin-top: 10rpx;
+  font-size: 13px;
+}
+
+.price-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+
+.item-price {
+  margin-left: 20rpx;
+  font-size: 14px;
+}
