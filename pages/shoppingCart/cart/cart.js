@@ -2,7 +2,8 @@ Page({
   data: {
     cartItemList: [],
     emptyHidden: false,
-    totalPrice: 0
+    totalPrice: 0,
+    checkAll: false
   },
   onShow() {
     const cartItemIdArray = my.getStorageSync({
@@ -64,5 +65,18 @@ Page({
     my.switchTab({
       url: 'pages/index/index'
     });
+  },
+  handleItemChange(event) {
+    const selectedValue = event.detail.value
+    console.log(selectedValue)
+    if (selectedValue.length === this.data.cartItemList.length) {
+      this.setData({
+        checkAll: true
+      })
+    } else {
+      this.setData({
+        checkAll: false
+      })
+    }
   }
 });
