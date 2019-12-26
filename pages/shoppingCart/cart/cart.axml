@@ -10,8 +10,8 @@
     <view>
       <block a:for="{{cartItemList}}">
         <view class="cart-line">
-          <view class="item-radio" onTap="">
-            <image src="/resources/icon/smallIco/select.png" class="select-icon" />
+          <view class="item-radio" onTap="handleSelectItem" data-item-symbol="{{item.symbol}}">
+            <image src="{{`/resources/icon/smallIco/${selectedItems.indexOf(item.symbol) > -1 ? 'select' : 'unselect'}.png`}}" class="select-icon" />
           </view>
           <view>
             <image src="{{item.cover}}" class="cart-item-img" />
@@ -28,14 +28,14 @@
     </view>
   </view>
   <view class="bottom-selletment" hidden="{{!emptyHidden}}">
-      <view class="sel-all-block" onTap="">
-        <image src="/resources/icon/smallIco/select.png" class="select-icon" />
+      <view class="sel-all-block" onTap="handleSelectAll">
+        <image src="{{`/resources/icon/smallIco/${checkAll ? 'select' : 'unselect'}.png`}}" class="select-icon" />
         <view class="sel-all-text">全选</view>
       </view>
       <view class="total-cal">
         <view class="total-amount">合计: ￥{{totalPrice}}</view>
         <view class="total-desc">不含运费。折扣优惠</view>
       </view>
-      <view class="selletment-me" onTap="">去结算(6)</view>
+      <view class="selletment-me" onTap="">去结算({{cartItemList.length}})</view>
     </view>
 </view>
