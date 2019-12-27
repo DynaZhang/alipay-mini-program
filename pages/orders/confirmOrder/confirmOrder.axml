@@ -39,6 +39,6 @@
       <view class="total-words">总计: </view>
       <view class="total-amount">￥ {{checkedOrderPriceAmount}}</view>
     </view>
-    <view class="submit-order" onTap="">提交订单</view>
+    <view class="submit-order" onTap="submitOrder">提交订单</view>
   </view>
 </view>

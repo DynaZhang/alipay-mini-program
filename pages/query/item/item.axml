@@ -71,6 +71,6 @@
       <view animation="{{animationInfo}}" class="animation-img" style="opacity:{{animationOpacity}};background-image:url('{{itemDetail.headerImages[0]}}')"></view>
       放入购物车
     </view>
-    <view class="btn buy-my">购买</view>
+    <view class="btn buy-my" onTap="buyMe">购买</view>
   </view>
 </view>

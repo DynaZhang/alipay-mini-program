@@ -106,5 +106,14 @@ Page({
     my.switchTab({
       url: 'pages/shoppingCart/cart/cart'
     });
+  },
+  buyMe() {
+    my.setStorageSync({
+      key: 'preOrderList',
+      data: [Object.assign({counts: 1}, this.data.itemDetail)]
+    })
+    my.navigateTo({
+      url: '/pages/orders/confirmOrder/confirmOrder'
+    });
   }
 });
