@@ -1,14 +1,14 @@
 {
   "pages": [
+    "pages/orders/confirmOrder/confirmOrder",
+    "pages/orders/addressList/addressList",
+    "pages/orders/addressInfo/addressInfo",
     "pages/index/index",
     "pages/shoppingCart/cart/cart",
-    "pages/orders/confirmOrder/confirmOrder",
     "pages/query/item/item",
     "pages/query/category/category",
     "pages/others/others",
     "pages/mine/info/info",
-    "pages/orders/addressInfo/addressInfo",
-    "pages/orders/addressList/addressList",
     "pages/orders/payment/payment",
     "pages/query/list/list"
   ],

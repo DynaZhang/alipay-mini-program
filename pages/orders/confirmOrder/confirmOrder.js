@@ -3,7 +3,8 @@ Page({
     preOrderList: [],
     checkedOrderAmount: 0,
     checkedOrderPriceAmount: 0,
-    remark: ''
+    remark: '',
+    addressHidden: false
   },
   onShow() {
     let preOrderList = my.getStorageSync({

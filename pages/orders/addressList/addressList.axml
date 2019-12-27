@@ -1,3 +1,38 @@
 <view>
-  New Page
+  <radio-group onChange="setDefault">
+    <view class="address-outter" style="border-style:dashed;border-color:#ff6699; border-width:0">
+      <view class="address-info">
+        <view class="address-line">
+          <view>zzl</view>
+          <view style="margin-left: 20rpx;">133****7922</view>
+        </view>
+        <view class="address-desc">
+          贵阳 南明区 xxxxxx                
+        </view>
+      </view>
+      <view class="operator">
+        <view class="set-default">
+          <label>
+            <radio class="rdo-default" value="0" checked="{{true}}"/> 设为默认                        
+          </label>
+        </view>
+        <view class="oper-block">
+          <image src="/resources/icon/smallIco/modify.png" class="oper-ico"/>
+          <view class="display-words">编辑</view>
+        </view>
+        <view class="oper-block">
+          <image src="/resources/icon/smallIco/delete.png" class="oper-ico"/>
+          <view class="display-words">删除</view>
+        </view>
+      </view>
+    </view>
+  </radio-group>
+  <view class="bottom-operator">
+    <view class="confirm-choose">        
+        确认选择    
+    </view>
+    <view class="add-new-address" onTap="addNewAddress">        
+        新增地址    
+    </view>
+</view>
 </view>
