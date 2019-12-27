@@ -9,7 +9,7 @@
                 </view>
             </view>
             <view>
-                <input type="text" name="receiver" maxlength="6" class="user-address" value="{{address.receiver}}"/>
+                <input type="text" name="receiver" maxlength="6" class="user-address" value="{{receiver}}"/>
             </view>
         </view>
 
@@ -21,11 +21,11 @@
                 </view>
             </view>
             <view>
-                <input type="digit" name="mobile" maxlength="11" class="user-address" value="{{address.mobile}}"/>
+                <input type="digit" name="mobile" maxlength="11" class="user-address" value="{{mobile}}"/>
             </view>
         </view>
 
-        <view class="address-line border-line">
+        <!-- <view class="address-line border-line">
             <view class="ico-label">
                 <image src="/resources/icon/smallIco/address-city.png" class="address-ico"/>
                 <view class="address-label">				            
@@ -35,8 +35,8 @@
             <view onTap="tempChooseCity">
                 <view class="area-choose">北京</view>
             </view>
-        </view>
-        <!-- <citys txtCityOut="{{address.city}}"/> -->
+        </view> -->
+        <choose-city txtOutCity={{city}}></choose-city>
 
         <view class="address-line">
             <view class="ico-label">
@@ -47,7 +47,7 @@
             </view>
             <view>
                 <input type="text" name="descAddress" maxlength="50" 
-                            class="user-address" style="width:500rpx;" value="{{address.descAddress}}"/>
+                            class="user-address" style="width:500rpx;" value="{{descAddress}}"/>
             </view>
         </view>
     </view>

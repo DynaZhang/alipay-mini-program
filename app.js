@@ -26,6 +26,10 @@ App({
     return null
   },
 
+  globalUserInfo() {
+    return null
+  },
+
   onLaunch(options) {
     // 小程序启动
     console.info('App onLaunch');

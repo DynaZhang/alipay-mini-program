@@ -1,34 +1,36 @@
 <view>
   <radio-group onChange="setDefault">
-    <view class="address-outter" style="border-style:dashed;border-color:#ff6699; border-width:0">
-      <view class="address-info">
-        <view class="address-line">
-          <view>zzl</view>
-          <view style="margin-left: 20rpx;">133****7922</view>
+    <block a:for="{{addressList}}">
+      <view class="address-outter" style="border-style:dashed;border-color:#ff6699; border-width:0">
+        <view class="address-info">
+          <view class="address-line">
+            <view>{{item.receiver}}</view>
+            <view style="margin-left: 20rpx;">{{item.mobile}}</view>
+          </view>
+          <view class="address-desc">
+            {{item.province}} {{item.city}} {{item.item.district}} {{item.descAddress}}               
+          </view>
         </view>
-        <view class="address-desc">
-          贵阳 南明区 xxxxxx                
+        <view class="operator">
+          <view class="set-default">
+            <label>
+              <radio class="rdo-default" value="{{item.id}}" checked="{{item.isDefault == 1}}"/> 设为默认                        
+            </label>
+          </view>
+          <view class="oper-block">
+            <image src="/resources/icon/smallIco/modify.png" class="oper-ico"/>
+            <view class="display-words" data-address-id="{{item.id}}" onTap="modifyAddress">编辑</view>
+          </view>
+          <view class="oper-block">
+            <image src="/resources/icon/smallIco/delete.png" class="oper-ico"/>
+            <view class="display-words" data-address-id="{{item.id}}" onTap="delAddress">删除</view>
+          </view>
         </view>
       </view>
-      <view class="operator">
-        <view class="set-default">
-          <label>
-            <radio class="rdo-default" value="0" checked="{{true}}"/> 设为默认                        
-          </label>
-        </view>
-        <view class="oper-block">
-          <image src="/resources/icon/smallIco/modify.png" class="oper-ico"/>
-          <view class="display-words">编辑</view>
-        </view>
-        <view class="oper-block">
-          <image src="/resources/icon/smallIco/delete.png" class="oper-ico"/>
-          <view class="display-words">删除</view>
-        </view>
-      </view>
-    </view>
+    </block>
   </radio-group>
   <view class="bottom-operator">
-    <view class="confirm-choose">        
+    <view class="confirm-choose" onTap="confirmAddress">        
         确认选择    
     </view>
     <view class="add-new-address" onTap="addNewAddress">        

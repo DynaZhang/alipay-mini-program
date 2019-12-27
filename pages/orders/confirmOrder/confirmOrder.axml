@@ -10,15 +10,15 @@
      <view class="full-address" hidden="{{!addressHidden}}">
       <view class="contact-info">
         <view>收货人: </view>
-        <view>zzl</view>
-        <view>133****7922</view>
+        <view>{{defaultAddress.receiver}}</view>
+        <view style="margin-left: 30rpx;">{{defaultAddress.mobile}}</view>
       </view>
       <view class="address-info">
         <image src="/resources/icon/smallIco/location.png" class="location-ico" />
-        <view class="address-province">贵州</view>
-        <view class="address-city">贵阳</view>
-        <view class="address-district">南明区</view>
-        <view class="address-desc">xxxxxxx</view>
+        <view class="address-province">{{defaultAddress.province}}</view>
+        <view class="address-city">{{defaultAddress.city}}</view>
+        <view class="address-district">{{defaultAddress.district}}</view>
+        <view class="address-desc">{{defaultAddress.descAddress}}</view>
         <image src="/resources/icon/smallIco/arrow-left.png" class="arrow-left-ico" />
       </view>
     </view>

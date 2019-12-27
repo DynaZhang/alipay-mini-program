@@ -1,0 +1,41 @@
+.address-line {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20rpx 0 20rpx 20rpx;
+}
+
+.border-line {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.ico-label {
+  width: 180rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.address-ico {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.address-label {
+  color: gray;
+  font-size: 13px;
+  margin-left: 10rpx;
+}
+
+.user-address {
+  font-size: 13px;
+}
+
+.area-choose {
+  width: 500rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}

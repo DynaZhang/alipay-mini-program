@@ -1,0 +1,16 @@
+<view>
+  <view class="address-line border-line" onTap="chooseCity"> 
+    <view class="ico-label">
+        <image src="/resources/icon/smallIco/address-city.png" class="address-ico"/>
+        <view class="address-label">				            
+            所在城市:				        
+        </view>
+    </view>
+    <view onTap="tempChooseCity">
+        <view class="area-choose">{{txtOutCity}}</view>
+        <view hidden="{{true}}">
+          <input type="text" name="txtCity" value="{{txtOutCity}}"/>
+        </view>
+    </view>
+  </view>
+</view>

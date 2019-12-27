@@ -1,10 +1,13 @@
+const app = getApp()
+
 Page({
   data: {
     preOrderList: [],
     checkedOrderAmount: 0,
     checkedOrderPriceAmount: 0,
     remark: '',
-    addressHidden: false
+    addressHidden: false,
+    defaultAddress: null
   },
   onShow() {
     let preOrderList = my.getStorageSync({
@@ -13,7 +16,6 @@ Page({
     this.setData({
       preOrderList
     })
-    console.log(this.data.preOrderList)
     let checkedOrderPriceAmount = 0
     this.data.preOrderList.forEach(item => {
       checkedOrderPriceAmount += Number(item.priceDiscountYuan) * item.counts
@@ -21,6 +23,31 @@ Page({
     this.setData({
       checkedOrderPriceAmount,
       checkedOrderAmount: preOrderList.length
+    })
+    this.initAddress()
+  },
+  initAddress() {
+    const userInfo = app.globalUserInfo()
+    let userId = '1001'
+    if (userInfo != null && userInfo != undefined) {
+      userId = userInfo.id
+    }
+    my.showLoading();
+    my.request({
+      url: `http://www.imoocdsp.com/address/default/${userId}`,
+      method: 'post',
+      headers: {'content-type': 'application/x-www-form-urlencoded'},
+      dataType: 'json',
+      success: (result) => {
+        my.hideLoading();
+        this.setData({
+          addressHidden: true,
+          defaultAddress: result.data.data
+        })
+      },
+      error: (error) => {
+        my.hideLoading();
+      }
     })
   },
   setRemark(event) {

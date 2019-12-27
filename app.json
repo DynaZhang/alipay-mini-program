@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/orders/confirmOrder/confirmOrder",
-    "pages/orders/addressList/addressList",
-    "pages/orders/addressInfo/addressInfo",
     "pages/index/index",
+    "pages/orders/confirmOrder/confirmOrder",
+    "pages/orders/addressInfo/addressInfo",
+    "pages/orders/addressList/addressList",
     "pages/shoppingCart/cart/cart",
     "pages/query/item/item",
     "pages/query/category/category",
