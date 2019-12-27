@@ -46,18 +46,16 @@ Page({
           } else {
             itemList[i].counts = cartItem.counts
             itemList[i].isSelected = cartItem.isSelected
-            const symbol = `${itemList[i].id};${itemList[i].priceDiscountYuan};${itemList[i].counts}`
+            const symbol = JSON.stringify(itemList[i])
             itemList[i].symbol = symbol
             selectedItems.push(symbol)
           }
         }
-        console.log(selectedItems)
         this.setData({
           cartItemList: itemList.filter((item,index) => {return item.counts > 0}),
           selectedItems
         })
         this.calPrice()
-        console.log(this.data.selectedItems)
         my.hideLoading()
       },
       error: (error) => {
@@ -106,13 +104,34 @@ Page({
   calPrice() {
     let totalPrice = 0
     this.data.selectedItems.forEach(value => {
-      const itemDetail = value.split(';')
-      const priceDiscountYuan = parseFloat(itemDetail[1])
-      const counts = parseInt(itemDetail[2])
+      const itemDetail = JSON.parse(value)
+      const priceDiscountYuan = itemDetail.priceDiscountYuan
+      const counts = itemDetail.counts
       totalPrice += priceDiscountYuan * counts
     })
     this.setData({
       totalPrice
     })
+  },
+  goConfirm() {
+    if (this.data.selectedItems.length === 0) {
+      my.alert({
+        title: '温馨提示',
+        content: '请至少选择一件商品再结算',
+        buttonText: '知道了!'
+      })
+    } else {
+      const preOrderList = []
+      this.data.selectedItems.forEach(item => {
+        preOrderList.push(JSON.parse(item))
+      })
+      my.setStorageSync({
+        key: 'preOrderList',
+        data: preOrderList,
+      });
+      my.navigateTo({
+        url: '/pages/orders/confirmOrder/confirmOrder'
+      });
+    }
   }
 });

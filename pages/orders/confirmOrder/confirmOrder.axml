@@ -1,3 +1,44 @@
 <view>
-  New Page
+  <view class="orders splitter">
+    <block a:for="{{preOrderList}}">
+      <view class="item">
+        <image src="{{item.cover}}" class="items-cover" />
+        <view class="item-title">{{item.name}}</view>
+        <view class="price-info">
+          <view class="item-old-line">
+            <view class="item-old-price">￥{{item.priceNormalYuan}}</view>
+          </view>
+          <view class="item-price">￥{{item.priceDiscountYuan}}</view>
+          <view class="item-counts">
+            <view>{{item.counts}}</view>
+            <view>件</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+  <view class="order-info">
+    <view class="info-line splitter">
+      <view class="label-words">运送方式：</view>
+      <view>全国包邮</view>
+    </view>
+    <view class="info-line splitter">
+      <view class="label-words">快递费用：</view>
+      <view>￥ 0.00</view>
+    </view>
+    <view class="info-line splitter">
+      <view class="label-words">合计：</view>
+      <view>￥ {{checkedOrderPriceAmount}}</view>
+    </view>
+    <view class="remark-info">
+      <input type="text" placeholder="订单备注" onInput="setRemark" placeholder-class="remark-holder" class="remark" />
+    </view>
+  </view>
+  <view class="bottom-operator">
+    <view class="total-info">
+      <view class="total-words">总计: </view>
+      <view class="total-amount">￥ {{checkedOrderPriceAmount}}</view>
+    </view>
+    <view class="submit-order" onTap="">提交订单</view>
+  </view>
 </view>
