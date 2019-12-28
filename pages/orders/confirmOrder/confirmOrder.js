@@ -28,9 +28,22 @@ Page({
   },
   initAddress() {
     const userInfo = app.globalUserInfo()
-    let userId = '1001'
     if (userInfo != null && userInfo != undefined) {
       userId = userInfo.id
+    } else {
+      my.confirm({
+        title: '温馨提示',
+        content: '收藏商品请前往登录',
+        confirmButtonText: '登录',
+        cancelButtonText: '取消',
+        success: (res) => {
+          if (res.confirm) {
+            my.switchTab({
+              url: '/pages/mine/info/info'
+            });
+          }
+        }
+      });
     }
     my.showLoading();
     my.request({

@@ -10,9 +10,23 @@ Page({
   },
   getAddressList() {
     const userInfo = app.globalUserInfo()
-    let userId = '1001'
     if (userInfo != null && userInfo != undefined) {
       userId = userInfo.id
+    } else {
+      my.confirm({
+        title: '温馨提示',
+        content: '添加收货地址请前往登录',
+        confirmButtonText: '登录',
+        cancelButtonText: '取消',
+        success: (res) => {
+          if (res.confirm) {
+            my.switchTab({
+              url: '/pages/mine/info/info'
+            });
+          }
+        }
+      });
+      return
     }
     my.showLoading();
     my.request({
@@ -34,9 +48,23 @@ Page({
   setDefault(event) {
     const addressId = event.detail.value
     const userInfo = app.globalUserInfo()
-    let userId = '1001'
     if (userInfo != null && userInfo != undefined) {
       userId = userInfo.id
+    } else {
+      my.confirm({
+        title: '温馨提示',
+        content: '设置收货地址前请先登录',
+        confirmButtonText: '登录',
+        cancelButtonText: '取消',
+        success: (res) => {
+          if (res.confirm) {
+            my.switchTab({
+              url: '/pages/mine/info/info'
+            });
+          }
+        }
+      });
+      return
     }
     const params = {
       userId,
@@ -68,9 +96,23 @@ Page({
   delAddress(event) {
     const addressId = event.target.dataset.addressId
     const userInfo = app.globalUserInfo()
-    let userId = '1001'
     if (userInfo != null && userInfo != undefined) {
       userId = userInfo.id
+    } else {
+      my.confirm({
+        title: '温馨提示',
+        content: '删除收货地址前请先登录',
+        confirmButtonText: '登录',
+        cancelButtonText: '取消',
+        success: (res) => {
+          if (res.confirm) {
+            my.switchTab({
+              url: '/pages/mine/info/info'
+            });
+          }
+        }
+      });
+      return
     }
     my.confirm({
       title: '提示',

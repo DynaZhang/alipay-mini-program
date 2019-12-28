@@ -1,9 +1,12 @@
+const app = getApp()
+
 Page({
   data: {
     itemDetail: null,
     animationOpacity: 0,
     animationInfo: {},
-    cartIcon: '/resources/icon/smallIco/cart-empty.png'
+    cartIcon: '/resources/icon/smallIco/cart-empty.png',
+    isLike: false
   },
   onShow() {
     let animation = my.createAnimation();
@@ -24,7 +27,6 @@ Page({
     let cartItemIdArray =  my.getStorageSync({
       key: 'cartItemIdArray'
     }).data;
-    console.log(cartItemIdArray)
     if (cartItemIdArray === null || cartItemIdArray === undefined) {
       cartItemIdArray = []
     }
@@ -94,6 +96,7 @@ Page({
         this.setData({
           itemDetail
         })
+        this.isItemLike()
         my.hideLoading()
       },
       error: (error) => {
@@ -115,5 +118,70 @@ Page({
     my.navigateTo({
       url: '/pages/orders/confirmOrder/confirmOrder'
     });
+  },
+  isItemLike() {
+    const userInfo = app.globalUserInfo()
+    if (userInfo != null && userInfo != undefined) {
+      userId = userInfo.id
+    } else {
+      return
+    }
+    const params = {
+      itemId: this.data.itemDetail.id,
+      userId
+    }
+    my.request({
+      method: 'post',
+      url: 'http://www.imoocdsp.com/item/userIsLikeItem',
+      data: params,
+      headers: {'content-type': 'application/x-www-form-urlencoded'},
+      success: (result) => {
+        this.setData({
+          isLike: result.data.data === 0 ? false : true
+        })
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    })
+  },
+  likeOperator() {
+    const userInfo = app.globalUserInfo()
+    if (userInfo != null && userInfo != undefined) {
+      userId = userInfo.id
+    } else {
+      my.confirm({
+        title: '温馨提示',
+        content: '收藏商品前请先登录',
+        confirmButtonText: '登录',
+        cancelButtonText: '取消',
+        success: (res) => {
+          if (res.confirm) {
+            my.switchTab({
+              url: '/pages/mine/info/info'
+            });
+          }
+        }
+      });
+      return
+    }
+    const params = {
+      itemId: this.data.itemDetail.id,
+      userId
+    }
+    my.request({
+      method: 'post',
+      url: `http://www.imoocdsp.com/item/${this.data.isLike ? 'unlike' : 'like'}`,
+      data: params,
+      headers: {'content-type': 'application/x-www-form-urlencoded'},
+      success: (result) => {
+        this.setData({
+          isLike: !this.data.isLike
+        })
+      },
+      error: (error) => {
+        console.log(error)
+      }
+    }) 
   }
 });

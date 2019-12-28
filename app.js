@@ -1,13 +1,6 @@
 App({
   // 定义常量
-  name: "imooc",
-  age: 18,
-  isBoy: true,
-  // 定义对象
-  course: {
-    lesson: "小程序",
-    teacherName: "Dyna",
-  },
+  userInfo: null,
   // 定义自定义方法
   cartItem(itemId,counts,isSelected) {
     var cartItem = new Object();
@@ -27,7 +20,15 @@ App({
   },
 
   globalUserInfo() {
-    return null
+    return this.userInfo
+  },
+
+  setGlobalUserInfo(userInfo) {
+    this.userInfo = userInfo
+  },
+
+  clearGlobalUserInfo() {
+    this.userInfo = null
   },
 
   onLaunch(options) {

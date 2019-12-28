@@ -11,13 +11,26 @@ Page({
   onLoad(params) {
     const addressId = params.addressId
     if (addressId != null && addressId != undefined) {
-      let userId = '1001'
       this.setData({
         addressId
       })
       const userInfo = app.globalUserInfo()
       if (userInfo != null && userInfo != undefined) {
         userId = userInfo.id
+      } else {
+        my.confirm({
+          title: '温馨提示',
+          content: '添加收货地址请前往登录',
+          confirmButtonText: '登录',
+          cancelButtonText: '取消',
+          success: (res) => {
+            if (res.confirm) {
+              my.switchTab({
+                url: '/pages/mine/info/info'
+              });
+            }
+          }
+        });
       }
       const params = {
         addressId,
@@ -83,9 +96,22 @@ Page({
     }
     console.log(addressBO)
     let userInfo = app.globalUserInfo()
-    let userId = 1001
     if (userInfo != null && userInfo != undefined) {
       userId = userInfo.id
+    }  else {
+      my.confirm({
+        title: '温馨提示',
+        content: '添加收货地址请前往登录',
+        confirmButtonText: '登录',
+        cancelButtonText: '取消',
+        success: (res) => {
+          if (res.confirm) {
+            my.switchTab({
+              url: '/pages/mine/info/info'
+            });
+          }
+        }
+      });
     }
     const params = {
       userId,

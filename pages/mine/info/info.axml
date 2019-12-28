@@ -1,3 +1,17 @@
 <view>
-  New Page
+  <view class="login-back" hidden="{{userLogin}}">
+    <view class="btn-login" onTap="login">请登录</view>
+  </view>
+
+  <view class="user-info" hidden="{{!userLogin}}">
+    <image class="avatar" src="{{userInfo.faceImage}}"></image>
+    <view class="user-words">
+      <view class="nickname">{{userInfo.nickname}}</view>
+      <view class="ico-back">
+        <image src="/resources/icon/smallIco/vip.png" class="vipcard-ico" />
+        <image src="/resources/icon/smallIco/certified.png" class="certified-ico" />
+      </view>
+    </view>
+    <image src="/resources/icon/smallIco/settings.png" class="set-ico" onTap="loginOut"/>
+  </view>
 </view>
